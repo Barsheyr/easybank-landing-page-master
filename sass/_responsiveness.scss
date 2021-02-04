@@ -1,0 +1,122 @@
+@media only screen and (max-width: 767px) {
+    header {
+        top: -1px;
+        margin-left: -18px;
+        margin-top: 0px;
+        .logo-color {
+            margin-left: -30px;
+        }
+        button {
+            display: none;
+        }
+    }
+    .next-gen {
+        background: url(../images/bg-intro-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 100%;
+        h1 {
+            padding: 0;
+            text-align: center;
+        }
+        p {
+            padding: 25px 20px;
+            text-align: center;
+            font-weight: 300;
+            font-size: 18px;
+        }
+        button {
+            margin-top: 15px;
+            margin-left: 35%;
+            margin-bottom: 20px;
+        }
+    }
+    .top {
+        margin-top: 120%
+    }
+    .mockups {
+        top: -10%;
+        left: 10%;
+        width: 100%;
+    }
+    .y-easybank {
+        h1 {
+            font-size: 50px;
+            text-align: center;
+        }
+        p {
+            padding: 0;
+            text-align: center;
+            margin-top: 20px
+        }
+        .easy-bank-icons {
+            @include flexColumn;
+            text-align: center;
+            .icon-img {
+                margin-top: 30px;
+            }
+        }
+    }
+    .articles-section {
+        h1 {
+            padding: 0;
+            text-align: center;
+            margin-top: 20%;
+            margin-bottom: 5%;
+        }
+        .articles {
+            display: flex;
+            flex-direction: column;
+            padding: 40px;
+            .article-pics {
+                margin-top: 10px;
+            }
+        }
+    }
+    .footer-parts {
+        .logo-white {
+            margin-left: 30px;
+            padding-top: 10px;
+        }
+        @include flexColumn;
+        .icons {
+            margin-left: -2%;
+            img {
+                margin-right: 14px;
+            }
+        }
+        .third-foot {
+            margin-top: 40px;
+            text-align: center;
+            margin-right: -80px;
+        }
+        .last-foot {
+            margin-top: 35px;
+            button {
+                margin-left: 35px;
+            }
+        }
+    }
+    .menu-btn {
+        display: flex;
+        margin-left: 65%;
+    }
+    .menu-nav {
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        top: 130%;
+        right: 50px;
+        left: 50px;
+        height: 40vh;
+        transform: translateX(100vw);
+        background-color: $White;
+        transition: transform 0.3s ease-in-out;
+        li a {
+            color: $Dark-blue;
+        }
+    }
+    .menu-nav.open {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,232 @@
+.next-gen {
+    // background-color: $Very-Light-Gray;
+    background: url(../images/bg-intro-desktop.svg), $Very-Light-Gray;
+    background-repeat: no-repeat;
+    background-position: 120% center;
+    background-size: 60%;
+    position: relative;
+    /*&-body {
+        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }*/
+}
+
+h1 {
+    color: $Dark-blue;
+    font-size: 60px;
+    font-weight: 500;
+    padding: 8% 50% 50px 0;
+    font-family: 'Public Sans', sans-serif;
+}
+
+p {
+    color: $Grayish-Blue;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 0 50% 50px 0;
+    font-family: 'Public Sans', sans-serif;
+}
+
+button {
+    background-image: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+    padding: 15px 30px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+}
+
+.mockups {
+    position: absolute;
+    right: 0;
+    top: -80px;
+    right: -119px;
+    width: 40vw;
+}
+
+.y-easybank {
+    background-color: $Light-Grayish-Blue;
+    h1 {
+        padding: 5% 2% 3% 0;
+        font-size: 40px
+    }
+}
+
+.easy-bank-icons {
+    font-family: 'Public Sans', sans-serif;
+    @include flexCenter;
+    h2 {
+        font-weight: 300;
+        color: $Dark-blue;
+        margin-bottom: 30px;
+        margin-top: 30px;
+    }
+    p {
+        color: $Grayish-Blue;
+        font-weight: 300;
+        font-size: 17px;
+        padding: 0 30px 0 0;
+    }
+}
+
+
+/* HAMBURGER */
+
+.menu-btn {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu-btn_lines,
+.menu-btn_lines::before,
+.menu-btn_lines::after {
+    width: 1.5rem;
+    height: 0.2rem;
+    background-color: $Dark-blue;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu-btn_lines::before,
+.menu-btn_lines::after {
+    position: absolute;
+    content: " ";
+}
+
+.menu-btn_lines::before {
+    transform: translateY(-0.5rem);
+}
+
+.menu-btn_lines::after {
+    transform: translateY(0.5rem);
+}
+
+
+/*ANIMATIONS*/
+
+.menu-btn.open .menu-btn_lines {
+    transform: translateX(2rem);
+    background-color: transparent;
+}
+
+.menu-btn.open .menu-btn_lines::before {
+    transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+}
+
+.menu-btn.open .menu-btn_lines::after {
+    transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+}
+
+
+/*----- ARTICLES-----*/
+
+.articles-section {
+    font-family: 'Public Sans', sans-serif;
+    background-color: $Very-Light-Gray;
+    h1 {
+        font-size: 40px;
+    }
+    .articles {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /*display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-column-gap: 20px;*/
+        margin-bottom: 70px;
+        .article-pic {
+            width: 100%;
+            height: 26vh;
+        }
+        .article-pics {
+            width: 100%;
+        }
+    }
+    .articles-partials {
+        background-color: $White;
+        padding: 5px;
+        h5 {
+            font-size: 15px;
+            color: $Grayish-Blue;
+            margin-top: 10px;
+            font-weight: 300;
+            padding: 0 20px;
+            margin-bottom: 15px;
+            font-family: 'Public Sans', sans-serif;
+        }
+        h3 {
+            color: $Dark-blue;
+            font-weight: 700;
+            font-size: 20px;
+            padding: 0 20px;
+            font-family: 'Public Sans', sans-serif;
+            &:hover {
+                color: $Lime-Green;
+                cursor: pointer;
+            }
+        }
+        p {
+            color: $Grayish-Blue;
+            font-size: 16.5px;
+            margin-top: 20px;
+            padding: 0 20px;
+            text-align: left;
+            margin-bottom: 25px;
+            font-family: 'Public Sans', sans-serif;
+        }
+    }
+}
+
+
+/*----- FOOTER -----*/
+
+footer {
+    background: $Dark-blue;
+    .footer-parts {
+        font-family: 'Public Sans', sans-serif;
+        margin-bottom: 30px;
+        @include flexCenter;
+        .logo-white {
+            margin-top: 20px;
+        }
+        .icons {
+            margin-top: 50px;
+            &:hover {
+                color: $Lime-Green;
+            }
+            img {
+                margin-left: 7px;
+            }
+        }
+        .third-foot {
+            margin-left: -100px;
+        }
+        li {
+            list-style: none;
+            margin-top: 20px;
+        }
+        li a {
+            text-decoration: none;
+            font-size: 300;
+            &:hover {
+                color: $Lime-Green;
+            }
+        }
+        a {
+            color: white;
+        }
+        button {
+            margin-top: 20px;
+        }
+        .copyright {
+            color: $Grayish-Blue;
+            margin-top: 40px;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+header {
+    font-family: 'Public Sans', sans-serif;
+    position: fixed;
+    z-index: 1000px;
+    width: 100%;
+    padding: 30px 100px 30px 100px;
+    margin-top: -2%;
+    margin-left: -7%;
+    background-color: $White;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $White;
+    a {
+        text-decoration: none;
+        color: $Grayish-Blue;
+    }
+    button {
+        background-image: linear-gradient(to right, $Lime-Green, $Bright-Cyan);
+        padding: 10px 30px;
+        border-radius: 20px;
+        border: none;
+        color: white;
+        cursor: pointer;
+        &:hover {
+            background-color: $Lime-Green;
+        }
+    }
+}
+
+.nav {
+    margin-left: -30%;
+}
+
+.menu-nav {
+    @include flexCenter;
+    list-style: none;
+    li a {
+        padding: 15px;
+        font-weight: 500;
+        font-size: 18px;
+        &:hover {
+            border-bottom: 4px solid $Lime-Green;
+            color: $Dark-blue;
+        }
+    }
+}
